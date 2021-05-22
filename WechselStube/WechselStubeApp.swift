@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct WechselStubeApp: App {
+    
+    private let appStore: AppStore = .init(initialState: .init(),
+                                           reducer: appReducer,
+                                           middlewares: [])
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appStore)
         }
     }
 }
