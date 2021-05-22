@@ -17,6 +17,7 @@
 		2A307F112658C7EA001DEE74 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F102658C7EA001DEE74 /* AppAction.swift */; };
 		2A307F132658C7F2001DEE74 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F122658C7F2001DEE74 /* AppReducer.swift */; };
 		2A307F152658C7F9001DEE74 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F142658C7F9001DEE74 /* AppState.swift */; };
+		2A307F1A2658CA3F001DEE74 /* ExchangeRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		2A307F102658C7EA001DEE74 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		2A307F122658C7F2001DEE74 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		2A307F142658C7F9001DEE74 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2A307ED82658C369001DEE74 /* ContentView.swift */,
+				2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				2A307F0D2658C5E4001DEE74 /* Store.swift in Sources */,
 				2A307F112658C7EA001DEE74 /* AppAction.swift in Sources */,
+				2A307F1A2658CA3F001DEE74 /* ExchangeRateView.swift in Sources */,
 				2A307ED92658C369001DEE74 /* ContentView.swift in Sources */,
 				2A307F152658C7F9001DEE74 /* AppState.swift in Sources */,
 				2A307ED72658C369001DEE74 /* WechselStubeApp.swift in Sources */,
