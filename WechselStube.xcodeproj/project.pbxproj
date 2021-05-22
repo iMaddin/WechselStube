@@ -45,6 +45,7 @@
 		2A307EEF2658C36A001DEE74 /* WechselStubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WechselStubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A307EF32658C36A001DEE74 /* WechselStubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechselStubeUITests.swift; sourceTree = "<group>"; };
 		2A307EF52658C36A001DEE74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A307F012658C3D9001DEE74 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +96,16 @@
 		2A307ED52658C369001DEE74 /* WechselStube */ = {
 			isa = PBXGroup;
 			children = (
-				2A307ED62658C369001DEE74 /* WechselStubeApp.swift */,
-				2A307ED82658C369001DEE74 /* ContentView.swift */,
-				2A307EDA2658C36A001DEE74 /* Assets.xcassets */,
+				2A307F012658C3D9001DEE74 /* readme.md */,
 				2A307EDF2658C36A001DEE74 /* Info.plist */,
+				2A307ED62658C369001DEE74 /* WechselStubeApp.swift */,
+				2A307EDA2658C36A001DEE74 /* Assets.xcassets */,
+				2A307F092658C48B001DEE74 /* Extensions */,
+				2A307F0B2658C50D001DEE74 /* Models */,
 				2A307EDC2658C36A001DEE74 /* Preview Content */,
+				2A307F0A2658C48F001DEE74 /* Protocols */,
+				2A307F032658C44F001DEE74 /* Redux */,
+				2A307F042658C453001DEE74 /* Views */,
 			);
 			path = WechselStube;
 			sourceTree = "<group>";
@@ -128,6 +134,74 @@
 				2A307EF52658C36A001DEE74 /* Info.plist */,
 			);
 			path = WechselStubeUITests;
+			sourceTree = "<group>";
+		};
+		2A307F032658C44F001DEE74 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				2A307F082658C46C001DEE74 /* Actions */,
+				2A307F072658C467001DEE74 /* Reducers */,
+				2A307F062658C463001DEE74 /* States */,
+				2A307F052658C457001DEE74 /* App */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		2A307F042658C453001DEE74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A307ED82658C369001DEE74 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A307F052658C457001DEE74 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2A307F062658C463001DEE74 /* States */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		2A307F072658C467001DEE74 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		2A307F082658C46C001DEE74 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2A307F092658C48B001DEE74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2A307F0A2658C48F001DEE74 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2A307F0B2658C50D001DEE74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
