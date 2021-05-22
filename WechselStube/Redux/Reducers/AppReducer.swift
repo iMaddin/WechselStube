@@ -10,8 +10,8 @@ import Foundation
 func appReducer(state: inout AppState, action: AppAction) {
     switch action {
     
-    case .exchangeRateCalculator:
-        break
+    case .exchangeRateCalculator(let action):
+        exchangeRateCalculatorReducer(state: &state.exchangeRateCalculatorState, action: action)
     case .updateExchangeRates(let rates):
         state.exchangeRateStore.exchangeRates = rates
     }

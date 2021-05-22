@@ -32,6 +32,7 @@
 		2A307F362658E939001DEE74 /* CurrencyConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F352658E939001DEE74 /* CurrencyConversionTests.swift */; };
 		2A307F392658EEB7001DEE74 /* CurrencyConversionMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */; };
 		2A307F3B2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */; };
+		2A307F3D2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		2A307F352658E939001DEE74 /* CurrencyConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionTests.swift; sourceTree = "<group>"; };
 		2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMiddleware.swift; sourceTree = "<group>"; };
 		2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMiddlewareTests.swift; sourceTree = "<group>"; };
+		2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				2A307EE82658C36A001DEE74 /* WechselStubeTests.swift */,
 				2A307F352658E939001DEE74 /* CurrencyConversionTests.swift */,
 				2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */,
+				2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */,
 				2A307EEA2658C36A001DEE74 /* Info.plist */,
 			);
 			path = WechselStubeTests;
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A307F3D2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift in Sources */,
 				2A307F3B2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift in Sources */,
 				2A307F362658E939001DEE74 /* CurrencyConversionTests.swift in Sources */,
 				2A307EE92658C36A001DEE74 /* WechselStubeTests.swift in Sources */,
