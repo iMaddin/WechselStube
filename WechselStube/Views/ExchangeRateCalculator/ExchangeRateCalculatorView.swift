@@ -10,6 +10,7 @@ import SwiftUI
 struct ExchangeRateCalculatorView: View {
     
     @EnvironmentObject var store: AppStore
+    @State private var amount = "1.0"
     
     var body: some View {
         Group {
@@ -34,10 +35,6 @@ private extension ExchangeRateCalculatorView {
             get: { store.state.exchangeRateCalculatorState.selected },
             set: { store.dispatch(.exchangeRateCalculator(.selected($0))) })
         
-        let amountBinding = Binding<String>(
-            get: { "\(store.state.exchangeRateCalculatorState.amount)" },
-            set: { store.dispatch(.exchangeRateCalculator(.amount(Double($0) ?? .zero))) })
-        
         return VStack {
             HStack {
                 Text(LocalizedStringKey("Choose a currency and enter an amount:"))
@@ -48,9 +45,12 @@ private extension ExchangeRateCalculatorView {
             
             CurrencyInputView(selected: selectedBinding,
                               currencies: Array(store.state.currencyStore.currencies),
-                              amount: amountBinding)
+                              amount: $amount)
                 .frame(height: 44.0)
                 .foregroundColor(.accentColor)
+        }
+        .onChange(of: amount) { value in
+            store.dispatch(.exchangeRateCalculator(.amount(Double(value) ?? .zero)))
         }
     }
     

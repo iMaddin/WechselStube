@@ -47,6 +47,7 @@ private extension CurrencyInputView {
     func valueInput() -> some View {
         TextField("", text: $amount)
             .multilineTextAlignment(.trailing)
+            .keyboardType(.decimalPad)
     }
     
 }
