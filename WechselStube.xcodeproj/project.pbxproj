@@ -27,6 +27,7 @@
 		2A307F2C2658DA38001DEE74 /* ExchangeRateCalculatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F2B2658DA38001DEE74 /* ExchangeRateCalculatorState.swift */; };
 		2A307F2E2658DC14001DEE74 /* CurrencyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F2D2658DC14001DEE74 /* CurrencyStore.swift */; };
 		2A307F302658DC2C001DEE74 /* ExchangeRateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F2F2658DC2C001DEE74 /* ExchangeRateStore.swift */; };
+		2A307F322658E6C0001DEE74 /* ExchangeRateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F312658E6C0001DEE74 /* ExchangeRateSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		2A307F2B2658DA38001DEE74 /* ExchangeRateCalculatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorState.swift; sourceTree = "<group>"; };
 		2A307F2D2658DC14001DEE74 /* CurrencyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStore.swift; sourceTree = "<group>"; };
 		2A307F2F2658DC2C001DEE74 /* ExchangeRateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateStore.swift; sourceTree = "<group>"; };
+		2A307F312658E6C0001DEE74 /* ExchangeRateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 			children = (
 				2A307F212658D3D0001DEE74 /* Currency.swift */,
 				2A307F232658D3D8001DEE74 /* ExchangeRate.swift */,
+				2A307F312658E6C0001DEE74 /* ExchangeRateSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				2A307F202658D2AA001DEE74 /* CurrencyInputView.swift in Sources */,
 				2A307F2E2658DC14001DEE74 /* CurrencyStore.swift in Sources */,
 				2A307F1E2658CE25001DEE74 /* CurrencyLabel.swift in Sources */,
+				2A307F322658E6C0001DEE74 /* ExchangeRateSource.swift in Sources */,
 				2A307F242658D3D8001DEE74 /* ExchangeRate.swift in Sources */,
 				2A307F302658DC2C001DEE74 /* ExchangeRateStore.swift in Sources */,
 				2A307F132658C7F2001DEE74 /* AppReducer.swift in Sources */,
