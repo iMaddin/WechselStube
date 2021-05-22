@@ -25,6 +25,8 @@ extension Currency: Identifiable {
     }
 }
 
+extension Currency: Equatable {}
+
 extension Currency {
     
     static var usd: Self {

@@ -19,6 +19,8 @@ extension ExchangeRate: Identifiable {
     }
 }
 
+extension ExchangeRate: Equatable {}
+
 extension ExchangeRate {
     static var usdJPY: Self {
         .init(fromCurrency: .usd,
