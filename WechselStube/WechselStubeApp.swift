@@ -12,7 +12,9 @@ struct WechselStubeApp: App {
     
     private let appStore: AppStore = .init(initialState: .init(),
                                            reducer: appReducer,
-                                           middlewares: [])
+                                           middlewares: [
+                                            currencyConversionMiddleware(service: .init(source: .none))
+                                           ])
     
     var body: some Scene {
         WindowGroup {
