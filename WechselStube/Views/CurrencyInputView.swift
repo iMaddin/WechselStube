@@ -27,8 +27,7 @@ private extension CurrencyInputView {
     
     func currencyPicker() -> some View {
         Picker(selection: $selected,
-               label: CurrencyLabel(title: selected.code,
-                                    subtitle: selected.name)) {
+               label: currencyLabel()) {
             
             ForEach(currencies) { currency in
                 CurrencyLabel(title: currency.code,
@@ -38,6 +37,11 @@ private extension CurrencyInputView {
             
         }
         .pickerStyle(MenuPickerStyle())
+    }
+    
+    func currencyLabel() -> some View {
+        CurrencyLabel(title: selected.code,
+                             subtitle: selected.name)
     }
     
     func valueInput() -> some View {

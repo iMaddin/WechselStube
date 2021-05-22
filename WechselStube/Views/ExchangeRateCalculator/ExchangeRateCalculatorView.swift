@@ -12,8 +12,18 @@ struct ExchangeRateCalculatorView: View {
     @EnvironmentObject var store: AppStore
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Group {
+            VStack {
+                inputView()
+                    .padding(.horizontal)
+                    .background(Color.blue.opacity(0.1).edgesIgnoringSafeArea(.all))
+                
+                Spacer(minLength: .zero)
+                
+                exchangeRateList()
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -28,9 +38,20 @@ private extension ExchangeRateCalculatorView {
             get: { "\(store.state.exchangeRateCalculatorState.amount)" },
             set: { store.dispatch(.exchangeRateCalculator(.amount(Double($0) ?? .zero))) })
         
-        return CurrencyInputView(selected: selectedBinding,
-                          currencies: store.state.currencyStore.currencies,
-                          amount: amountBinding)
+        return VStack {
+            HStack {
+                Text(LocalizedStringKey("Choose a currency and enter an amount:"))
+                    .font(.caption)
+                Spacer()
+            }
+            .padding(.top)
+            
+            CurrencyInputView(selected: selectedBinding,
+                              currencies: store.state.currencyStore.currencies,
+                              amount: amountBinding)
+                .frame(height: 44.0)
+                .foregroundColor(.accentColor)
+        }
     }
     
     func exchangeRateList() -> some View {
@@ -46,7 +67,9 @@ private extension ExchangeRateCalculatorView {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let store: AppStore = .init(
-            initialState: .init(),
+            initialState: .init(currencyStore: .init(currencies: [.jpy, .usd]),
+                                exchangeRateStore: .init(exchangeRates: [.usdJPY]),
+                                exchangeRateCalculatorState: .init(selected: .usd, amount: 1.0)),
             reducer: appReducer)
         
         return ExchangeRateCalculatorView()
