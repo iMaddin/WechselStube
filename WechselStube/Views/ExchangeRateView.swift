@@ -15,35 +15,37 @@ struct ExchangeRateView: View {
     
     var body: some View {
         HStack {
-            labels()
+            label()
             
             Spacer()
             
-            Text(value)
-                .font(.title)
-                .bold()
+            valueView()
         }
     }
+    
 }
 
 private extension ExchangeRateView {
-    func labels() -> some View {
-        VStack(alignment: .leading) {
-            Text(title)
-                .foregroundColor(.primary)
-                .font(.title3)
-            
-            Text(subtitle)
-                .foregroundColor(.secondary)
-                .font(.caption)
-        }
+    
+    func label() -> some View {
+        CurrencyLabel(title: title,
+                      subtitle: subtitle)
     }
+    
+    func valueView() -> some View {
+        Text(value)
+            .font(.largeTitle)
+            .multilineTextAlignment(.trailing)
+    }
+    
 }
 
 struct ExchangeRateView_Previews: PreviewProvider {
     static var previews: some View {
-        ExchangeRateView(title: "USD",
-                         subtitle: "United States Dollars",
-                         value: "123.45")
+        Group {
+            ExchangeRateView(title: "USD",
+                             subtitle: "United States Dollars",
+                             value: "123.45")
+        }
     }
 }
