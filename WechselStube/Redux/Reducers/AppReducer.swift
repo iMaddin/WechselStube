@@ -10,5 +10,7 @@ import Foundation
 func appReducer(state: inout AppState, action: AppAction) {
     switch action {
     
+    case .exchangeRateCalculator:
+        break
     }
 }
