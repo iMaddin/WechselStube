@@ -8,5 +8,6 @@
 import Foundation
 
 struct AppState: Equatable {
-    
+    var currencyStore: CurrencyStore = .init()
+    var exchangeRateStore: ExchangeRateStore = .init()
 }

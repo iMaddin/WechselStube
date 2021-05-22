@@ -22,6 +22,8 @@
 		2A307F202658D2AA001DEE74 /* CurrencyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F1F2658D2AA001DEE74 /* CurrencyInputView.swift */; };
 		2A307F222658D3D0001DEE74 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F212658D3D0001DEE74 /* Currency.swift */; };
 		2A307F242658D3D8001DEE74 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F232658D3D8001DEE74 /* ExchangeRate.swift */; };
+		2A307F2E2658DC14001DEE74 /* CurrencyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F2D2658DC14001DEE74 /* CurrencyStore.swift */; };
+		2A307F302658DC2C001DEE74 /* ExchangeRateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F2F2658DC2C001DEE74 /* ExchangeRateStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		2A307F1F2658D2AA001DEE74 /* CurrencyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInputView.swift; sourceTree = "<group>"; };
 		2A307F212658D3D0001DEE74 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2A307F232658D3D8001DEE74 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		2A307F2D2658DC14001DEE74 /* CurrencyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStore.swift; sourceTree = "<group>"; };
+		2A307F2F2658DC2C001DEE74 /* ExchangeRateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				2A307F142658C7F9001DEE74 /* AppState.swift */,
+				2A307F2D2658DC14001DEE74 /* CurrencyStore.swift */,
+				2A307F2F2658DC2C001DEE74 /* ExchangeRateStore.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -360,8 +366,10 @@
 				2A307ED72658C369001DEE74 /* WechselStubeApp.swift in Sources */,
 				2A307F222658D3D0001DEE74 /* Currency.swift in Sources */,
 				2A307F202658D2AA001DEE74 /* CurrencyInputView.swift in Sources */,
+				2A307F2E2658DC14001DEE74 /* CurrencyStore.swift in Sources */,
 				2A307F1E2658CE25001DEE74 /* CurrencyLabel.swift in Sources */,
 				2A307F242658D3D8001DEE74 /* ExchangeRate.swift in Sources */,
+				2A307F302658DC2C001DEE74 /* ExchangeRateStore.swift in Sources */,
 				2A307F132658C7F2001DEE74 /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
