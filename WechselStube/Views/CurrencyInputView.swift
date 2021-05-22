@@ -33,6 +33,7 @@ private extension CurrencyInputView {
             ForEach(currencies) { currency in
                 CurrencyLabel(title: currency.code,
                               subtitle: currency.name)
+                    .tag(currency)
             }
             
         }
