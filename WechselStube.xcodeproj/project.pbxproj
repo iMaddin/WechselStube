@@ -19,6 +19,7 @@
 		2A307F152658C7F9001DEE74 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F142658C7F9001DEE74 /* AppState.swift */; };
 		2A307F1A2658CA3F001DEE74 /* ExchangeRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */; };
 		2A307F1E2658CE25001DEE74 /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F1D2658CE25001DEE74 /* CurrencyLabel.swift */; };
+		2A307F202658D2AA001DEE74 /* CurrencyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F1F2658D2AA001DEE74 /* CurrencyInputView.swift */; };
 		2A307F222658D3D0001DEE74 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F212658D3D0001DEE74 /* Currency.swift */; };
 		2A307F242658D3D8001DEE74 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F232658D3D8001DEE74 /* ExchangeRate.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		2A307F142658C7F9001DEE74 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateView.swift; sourceTree = "<group>"; };
 		2A307F1D2658CE25001DEE74 /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
+		2A307F1F2658D2AA001DEE74 /* CurrencyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInputView.swift; sourceTree = "<group>"; };
 		2A307F212658D3D0001DEE74 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2A307F232658D3D8001DEE74 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				2A307ED82658C369001DEE74 /* ContentView.swift */,
+				2A307F1F2658D2AA001DEE74 /* CurrencyInputView.swift */,
 				2A307F1D2658CE25001DEE74 /* CurrencyLabel.swift */,
 				2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */,
 			);
@@ -356,6 +359,7 @@
 				2A307F152658C7F9001DEE74 /* AppState.swift in Sources */,
 				2A307ED72658C369001DEE74 /* WechselStubeApp.swift in Sources */,
 				2A307F222658D3D0001DEE74 /* Currency.swift in Sources */,
+				2A307F202658D2AA001DEE74 /* CurrencyInputView.swift in Sources */,
 				2A307F1E2658CE25001DEE74 /* CurrencyLabel.swift in Sources */,
 				2A307F242658D3D8001DEE74 /* ExchangeRate.swift in Sources */,
 				2A307F132658C7F2001DEE74 /* AppReducer.swift in Sources */,
