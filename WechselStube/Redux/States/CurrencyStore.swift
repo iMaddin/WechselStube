@@ -8,5 +8,5 @@
 import Foundation
 
 struct CurrencyStore: Equatable {
-    var currencies: [Currency] = []
+    var currencies: Set<Currency> = []
 }

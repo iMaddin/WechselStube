@@ -20,6 +20,7 @@ extension ExchangeRate: Identifiable {
 }
 
 extension ExchangeRate: Equatable {}
+extension ExchangeRate: Hashable {}
 
 extension ExchangeRate {
     static var usdJPY: Self {

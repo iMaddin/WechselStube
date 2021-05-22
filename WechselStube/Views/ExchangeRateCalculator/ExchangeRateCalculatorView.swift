@@ -47,7 +47,7 @@ private extension ExchangeRateCalculatorView {
             .padding(.top)
             
             CurrencyInputView(selected: selectedBinding,
-                              currencies: store.state.currencyStore.currencies,
+                              currencies: Array(store.state.currencyStore.currencies),
                               amount: amountBinding)
                 .frame(height: 44.0)
                 .foregroundColor(.accentColor)
@@ -55,10 +55,10 @@ private extension ExchangeRateCalculatorView {
     }
     
     func exchangeRateList() -> some View {
-        List(store.state.exchangeRateStore.exchangeRates) { exchangeRate in
+        List(Array(store.state.exchangeRateStore.exchangeRates)) { exchangeRate in
             ExchangeRateView(title: exchangeRate.toCurrency.name,
                              subtitle: exchangeRate.toCurrency.name,
-                             value: "\(exchangeRate.rate)")
+                             value: "\(exchangeRate.rate * store.state.exchangeRateCalculatorState.amount)")
         }
     }
     
