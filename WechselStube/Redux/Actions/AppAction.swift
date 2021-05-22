@@ -8,5 +8,5 @@
 import Foundation
 
 enum AppAction {
-    
+    case exchangeRateCalculator(ExchangeRateCalculatorAction)
 }
