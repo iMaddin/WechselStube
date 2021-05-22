@@ -14,3 +14,10 @@ struct ExchangeRateSource {
 
 extension ExchangeRateSource: Hashable {}
 extension ExchangeRateSource: Equatable {}
+
+extension ExchangeRateSource {
+    static var none: Self {
+        .init(source: .init(code: "", name: ""),
+              rates: [:])
+    }
+}
