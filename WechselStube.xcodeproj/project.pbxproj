@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A307ED72658C369001DEE74 /* WechselStubeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307ED62658C369001DEE74 /* WechselStubeApp.swift */; };
-		2A307ED92658C369001DEE74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307ED82658C369001DEE74 /* ContentView.swift */; };
+		2A307ED92658C369001DEE74 /* ExchangeRateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307ED82658C369001DEE74 /* ExchangeRateCalculatorView.swift */; };
 		2A307EDB2658C36A001DEE74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A307EDA2658C36A001DEE74 /* Assets.xcassets */; };
 		2A307EDE2658C36A001DEE74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A307EDD2658C36A001DEE74 /* Preview Assets.xcassets */; };
 		2A307EE92658C36A001DEE74 /* WechselStubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307EE82658C36A001DEE74 /* WechselStubeTests.swift */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		2A307ED32658C369001DEE74 /* WechselStube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechselStube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A307ED62658C369001DEE74 /* WechselStubeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechselStubeApp.swift; sourceTree = "<group>"; };
-		2A307ED82658C369001DEE74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A307ED82658C369001DEE74 /* ExchangeRateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorView.swift; sourceTree = "<group>"; };
 		2A307EDA2658C36A001DEE74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A307EDD2658C36A001DEE74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A307EDF2658C36A001DEE74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		2A307F042658C453001DEE74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2A307ED82658C369001DEE74 /* ContentView.swift */,
+				2A307F262658D9BE001DEE74 /* ExchangeRateCalculator */,
 				2A307F1F2658D2AA001DEE74 /* CurrencyInputView.swift */,
 				2A307F1D2658CE25001DEE74 /* CurrencyLabel.swift */,
 				2A307F192658CA3F001DEE74 /* ExchangeRateView.swift */,
@@ -241,6 +241,7 @@
 				2A307F272658DA27001DEE74 /* ExchangeRateCalculatorAction.swift */,
 				2A307F292658DA2E001DEE74 /* ExchangeRateCalculatorReducer.swift */,
 				2A307F2B2658DA38001DEE74 /* ExchangeRateCalculatorState.swift */,
+				2A307ED82658C369001DEE74 /* ExchangeRateCalculatorView.swift */,
 			);
 			path = ExchangeRateCalculator;
 			sourceTree = "<group>";
@@ -377,7 +378,7 @@
 				2A307F0D2658C5E4001DEE74 /* Store.swift in Sources */,
 				2A307F112658C7EA001DEE74 /* AppAction.swift in Sources */,
 				2A307F1A2658CA3F001DEE74 /* ExchangeRateView.swift in Sources */,
-				2A307ED92658C369001DEE74 /* ContentView.swift in Sources */,
+				2A307ED92658C369001DEE74 /* ExchangeRateCalculatorView.swift in Sources */,
 				2A307F2C2658DA38001DEE74 /* ExchangeRateCalculatorState.swift in Sources */,
 				2A307F282658DA27001DEE74 /* ExchangeRateCalculatorAction.swift in Sources */,
 				2A307F2A2658DA2E001DEE74 /* ExchangeRateCalculatorReducer.swift in Sources */,

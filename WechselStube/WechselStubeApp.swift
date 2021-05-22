@@ -16,7 +16,7 @@ struct WechselStubeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ExchangeRateCalculatorView()
                 .environmentObject(appStore)
         }
     }
