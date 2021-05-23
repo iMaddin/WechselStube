@@ -50,6 +50,7 @@
 		2A307F5F265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */; };
 		2A307F61265A2532001DEE74 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F60265A2532001DEE74 /* AppStateTests.swift */; };
 		2A307F65265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F64265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift */; };
+		2A794F2A265A557F001A19E2 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A794F29265A557F001A19E2 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,6 @@
 		2A307EEF2658C36A001DEE74 /* WechselStubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WechselStubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A307EF32658C36A001DEE74 /* WechselStubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechselStubeUITests.swift; sourceTree = "<group>"; };
 		2A307EF52658C36A001DEE74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A307F012658C3D9001DEE74 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		2A307F0C2658C5E4001DEE74 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		2A307F102658C7EA001DEE74 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		2A307F122658C7F2001DEE74 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
@@ -120,6 +120,7 @@
 		2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesFetcherMiddlewareTests.swift; sourceTree = "<group>"; };
 		2A307F60265A2532001DEE74 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 		2A307F64265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataMiddleWareTests.swift; sourceTree = "<group>"; };
+		2A794F29265A557F001A19E2 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +171,7 @@
 		2A307ED52658C369001DEE74 /* WechselStube */ = {
 			isa = PBXGroup;
 			children = (
-				2A307F012658C3D9001DEE74 /* readme.md */,
+				2A794F29265A557F001A19E2 /* readme.md */,
 				2A307F57265A0571001DEE74 /* TestWithYourApiKeyHere.swift */,
 				2A307EDF2658C36A001DEE74 /* Info.plist */,
 				2A307ED62658C369001DEE74 /* WechselStubeApp.swift */,
@@ -443,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A307EDE2658C36A001DEE74 /* Preview Assets.xcassets in Resources */,
+				2A794F2A265A557F001A19E2 /* readme.md in Resources */,
 				2A307EDB2658C36A001DEE74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
