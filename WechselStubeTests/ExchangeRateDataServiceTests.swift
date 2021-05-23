@@ -12,7 +12,14 @@ class ExchangeRateDataServiceTests: XCTestCase {
     
     let userDefaultsSuiteName = "TestDefaults"
     var service: ExchangeRateDataService?
-
+    
+    let usd: Currency = .init(code: "USD", name: "")
+    let jpy: Currency = .init(code: "JPY", name: "")
+    let eur: Currency = .init(code: "EUR", name: "")
+    
+    let usdJPY = 108.92504
+    let usdEUR = 0.820934
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
@@ -22,11 +29,11 @@ class ExchangeRateDataServiceTests: XCTestCase {
         }
         
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
 }
 
 extension ExchangeRateDataServiceTests {
@@ -43,13 +50,29 @@ extension ExchangeRateDataServiceTests {
     }
     
     func testExchangeRate() throws {
-        XCTAssertNil(service?.exchangeRate)
+        XCTAssertNil(service?.exchangeRateSource)
         
-        let expected: ExchangeRate = .usdJPY
+        let expected: ExchangeRateSource = .init(source: usd.code,
+                                                 rates: [
+                                                    usd.code: 1.0,
+                                                    jpy.code: usdJPY,
+                                                    eur.code: usdEUR
+                                                 ]
+                                                 )
+                                                 
+        service?.exchangeRateSource = expected
         
-        service?.exchangeRate = expected
+        let result = try XCTUnwrap(service?.exchangeRateSource)
+        XCTAssertEqual(result, expected)
+    }
+    
+    func testCurrencies() throws {
+        XCTAssertNil(service?.currencies)
         
-        let result = try XCTUnwrap(service?.exchangeRate)
+        let expected: Set<Currency> = [.jpy, .usd]
+        service?.currencies = expected
+        
+        let result = try XCTUnwrap(service?.currencies)
         XCTAssertEqual(result, expected)
     }
     

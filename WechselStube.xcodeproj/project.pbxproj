@@ -33,8 +33,11 @@
 		2A307F392658EEB7001DEE74 /* CurrencyConversionMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */; };
 		2A307F3B2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */; };
 		2A307F3D2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */; };
+		2A307F3F2659048F001DEE74 /* ExchangeRateDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3E2659048F001DEE74 /* ExchangeRateDataService.swift */; };
+		2A307F41265904F4001DEE74 /* PersistentDataMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F40265904F4001DEE74 /* PersistentDataMiddleware.swift */; };
 		2A307F4626590634001DEE74 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F4526590634001DEE74 /* APIClient.swift */; };
 		2A307F48265907D6001DEE74 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F47265907D6001DEE74 /* Request.swift */; };
+		2A307F4A265949D9001DEE74 /* ExchangeRateDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F49265949D9001DEE74 /* ExchangeRateDataServiceTests.swift */; };
 		2A307F4C265A0135001DEE74 /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F4B265A0135001DEE74 /* DataState.swift */; };
 		2A307F4E265A0153001DEE74 /* DataAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F4D265A0153001DEE74 /* DataAction.swift */; };
 		2A307F50265A018F001DEE74 /* DataReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F4F265A018F001DEE74 /* DataReducer.swift */; };
@@ -43,9 +46,6 @@
 		2A307F56265A0468001DEE74 /* CurrencyLayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F55265A0468001DEE74 /* CurrencyLayerService.swift */; };
 		2A307F58265A0571001DEE74 /* TestWithYourApiKeyHere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F57265A0571001DEE74 /* TestWithYourApiKeyHere.swift */; };
 		2A307F5B265A17E1001DEE74 /* CurrencyLayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5A265A17E1001DEE74 /* CurrencyLayerList.swift */; };
-		2A307F3F2659048F001DEE74 /* ExchangeRateDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3E2659048F001DEE74 /* ExchangeRateDataService.swift */; };
-		2A307F41265904F4001DEE74 /* PersistentDataMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F40265904F4001DEE74 /* PersistentDataMiddleware.swift */; };
-		2A307F4A265949D9001DEE74 /* ExchangeRateDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F49265949D9001DEE74 /* ExchangeRateDataServiceTests.swift */; };
 		2A307F5D265A18B7001DEE74 /* CurrencyLayerLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5C265A18B7001DEE74 /* CurrencyLayerLive.swift */; };
 		2A307F5F265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */; };
 		2A307F61265A2532001DEE74 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F60265A2532001DEE74 /* AppStateTests.swift */; };
@@ -102,8 +102,11 @@
 		2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMiddleware.swift; sourceTree = "<group>"; };
 		2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMiddlewareTests.swift; sourceTree = "<group>"; };
 		2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorTests.swift; sourceTree = "<group>"; };
+		2A307F3E2659048F001DEE74 /* ExchangeRateDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDataService.swift; sourceTree = "<group>"; };
+		2A307F40265904F4001DEE74 /* PersistentDataMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataMiddleware.swift; sourceTree = "<group>"; };
 		2A307F4526590634001DEE74 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		2A307F47265907D6001DEE74 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		2A307F49265949D9001DEE74 /* ExchangeRateDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDataServiceTests.swift; sourceTree = "<group>"; };
 		2A307F4B265A0135001DEE74 /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
 		2A307F4D265A0153001DEE74 /* DataAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAction.swift; sourceTree = "<group>"; };
 		2A307F4F265A018F001DEE74 /* DataReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReducer.swift; sourceTree = "<group>"; };
@@ -112,9 +115,6 @@
 		2A307F55265A0468001DEE74 /* CurrencyLayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerService.swift; sourceTree = "<group>"; };
 		2A307F57265A0571001DEE74 /* TestWithYourApiKeyHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWithYourApiKeyHere.swift; sourceTree = "<group>"; };
 		2A307F5A265A17E1001DEE74 /* CurrencyLayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerList.swift; sourceTree = "<group>"; };
-		2A307F3E2659048F001DEE74 /* ExchangeRateDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDataService.swift; sourceTree = "<group>"; };
-		2A307F40265904F4001DEE74 /* PersistentDataMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataMiddleware.swift; sourceTree = "<group>"; };
-		2A307F49265949D9001DEE74 /* ExchangeRateDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDataServiceTests.swift; sourceTree = "<group>"; };
 		2A307F5C265A18B7001DEE74 /* CurrencyLayerLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerLive.swift; sourceTree = "<group>"; };
 		2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesFetcherMiddlewareTests.swift; sourceTree = "<group>"; };
 		2A307F60265A2532001DEE74 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
@@ -311,8 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */,
-				2A307F40265904F4001DEE74 /* PersistentDataMiddleware.swift */,
 				2A307F53265A03D9001DEE74 /* ExchangeRatesFetcherMiddleware.swift */,
+				2A307F40265904F4001DEE74 /* PersistentDataMiddleware.swift */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";

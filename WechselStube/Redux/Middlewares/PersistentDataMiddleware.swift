@@ -12,6 +12,12 @@ func persistentDataMiddleware(service: ExchangeRateDataService) -> Middleware<Ap
     { state, action in
         switch action {
         
+        case .updateCurrencies(let currencies):
+            service.currencies = currencies
+            service.lastFetchDate = Date()
+        case .updateExchangeRateSource(let source):
+            service.exchangeRateSource = source
+            service.lastFetchDate = Date()
         default:
             break
         }

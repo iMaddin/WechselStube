@@ -9,10 +9,11 @@ import Foundation
 
 enum ExchangeRateKeys: String {
     case lastFetchDate
-    case exchangeRate
+    case exchangeRateSource
+    case currencies
 }
 
-struct ExchangeRateDataService {
+class ExchangeRateDataService {
     
     var userDefaults: UserDefaults
     
@@ -29,16 +30,30 @@ extension ExchangeRateDataService {
         set { userDefaults.set(newValue, forKey: ExchangeRateKeys.lastFetchDate.rawValue) }
     }
     
-    var exchangeRate: ExchangeRate? {
+    var currencies: Set<Currency>? {
         get {
-            guard let data = userDefaults.value(forKey: ExchangeRateKeys.exchangeRate.rawValue) as? Data else { return nil }
-            return try? JSONDecoder().decode(ExchangeRate.self, from: data)
+            guard let data = userDefaults.value(forKey: ExchangeRateKeys.currencies.rawValue) as? Data else { return nil }
+            return try? JSONDecoder().decode(Set<Currency>.self, from: data)
         }
         set {
             
             if let newValue = newValue,
                let data = try? JSONEncoder().encode(newValue) {
-               userDefaults.set(data, forKey: ExchangeRateKeys.exchangeRate.rawValue)
+               userDefaults.set(data, forKey: ExchangeRateKeys.currencies.rawValue)
+            }
+        }
+    }
+    
+    var exchangeRateSource: ExchangeRateSource? {
+        get {
+            guard let data = userDefaults.value(forKey: ExchangeRateKeys.exchangeRateSource.rawValue) as? Data else { return nil }
+            return try? JSONDecoder().decode(ExchangeRateSource.self, from: data)
+        }
+        set {
+            
+            if let newValue = newValue,
+               let data = try? JSONEncoder().encode(newValue) {
+               userDefaults.set(data, forKey: ExchangeRateKeys.exchangeRateSource.rawValue)
             }
         }
     }
