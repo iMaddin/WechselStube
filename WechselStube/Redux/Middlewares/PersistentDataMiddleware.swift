@@ -13,14 +13,31 @@ func persistentDataMiddleware(service: ExchangeRateDataService) -> Middleware<Ap
         switch action {
         
         case .data(.load):
-            if let lastFetchDate = service.lastFetchDate,
-            lastFetchDate > Date().addingTimeInterval(30*60) {
+            
+            guard let lastFetchDate = service.lastFetchDate else {
+                debugPrint("No existing data. Fetching...")
+                return Just(AppAction.data(.fetch))
+                    .eraseToAnyPublisher()
+            }
+            
+            debugPrint("Last fetch: (\(Date().timeIntervalSince(lastFetchDate)) seconds ago)")
+            
+            if lastFetchDate > Date().addingTimeInterval(30*60) {
+                debugPrint("Fetching new data...")
                 return Just(AppAction.data(.fetch))
                     .eraseToAnyPublisher()
             } else {
+                debugPrint("Loading cached data...")
                 return Just(AppAction.data(.loadCached))
                     .eraseToAnyPublisher()
             }
+            
+        case .data(.loadCached):
+            guard let currencies = service.currencies,
+                  let source = service.exchangeRateSource else { break }
+            return Just(AppAction.update(currencies: currencies,
+                                         exchangeRateSource: source))
+                .eraseToAnyPublisher()
         
         case .update(currencies: let currencies, exchangeRateSource: let source):
             service.currencies = currencies
