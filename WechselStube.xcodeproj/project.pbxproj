@@ -49,6 +49,7 @@
 		2A307F5D265A18B7001DEE74 /* CurrencyLayerLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5C265A18B7001DEE74 /* CurrencyLayerLive.swift */; };
 		2A307F5F265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */; };
 		2A307F61265A2532001DEE74 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F60265A2532001DEE74 /* AppStateTests.swift */; };
+		2A307F65265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F64265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		2A307F5C265A18B7001DEE74 /* CurrencyLayerLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerLive.swift; sourceTree = "<group>"; };
 		2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesFetcherMiddlewareTests.swift; sourceTree = "<group>"; };
 		2A307F60265A2532001DEE74 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
+		2A307F64265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataMiddleWareTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */,
 				2A307F49265949D9001DEE74 /* ExchangeRateDataServiceTests.swift */,
 				2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */,
+				2A307F64265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift */,
 				2A307EEA2658C36A001DEE74 /* Info.plist */,
 			);
 			path = WechselStubeTests;
@@ -511,6 +514,7 @@
 				2A307F362658E939001DEE74 /* CurrencyConversionTests.swift in Sources */,
 				2A307F5F265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift in Sources */,
 				2A307EE92658C36A001DEE74 /* WechselStubeTests.swift in Sources */,
+				2A307F65265A3C79001DEE74 /* PersistentDataMiddleWareTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
