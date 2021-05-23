@@ -23,6 +23,11 @@ struct WechselStubeApp: App {
             ExchangeRateCalculatorView()
                 .environmentObject(appStore)
                 .onAppear {
+                    // uncomment to delete fetched data
+//                    if let bundleID = Bundle.main.bundleIdentifier {
+//                        UserDefaults.standard.removePersistentDomain(forName: bundleID)
+//                    }
+                    
                     appStore.dispatch(.data(.load))
                 }
         }
