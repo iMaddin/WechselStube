@@ -56,7 +56,7 @@ private extension ExchangeRateCalculatorView {
     }
     
     func exchangeRateList() -> some View {
-        List(Array(store.state.exchangeRateStore.exchangeRates)) { exchangeRate in
+        List(store.state.exchangeRateStore.sortedExchangeRates) { exchangeRate in
             ExchangeRateView(title: exchangeRate.toCurrency.name,
                              subtitle: exchangeRate.toCurrency.name,
                              value: "\(exchangeRate.rate * store.state.exchangeRateCalculatorState.amount)")
