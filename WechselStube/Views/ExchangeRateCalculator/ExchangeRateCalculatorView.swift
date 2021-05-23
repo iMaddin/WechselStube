@@ -45,7 +45,7 @@ private extension ExchangeRateCalculatorView {
             .padding(.top)
             
             CurrencyInputView(selected: selectedBinding,
-                              currencies: Array(store.state.currencyStore.currencies),
+                              currencies: store.state.currencyStore.sortedCurrencies,
                               amount: $amount)
                 .frame(height: 44.0)
                 .foregroundColor(.accentColor)
