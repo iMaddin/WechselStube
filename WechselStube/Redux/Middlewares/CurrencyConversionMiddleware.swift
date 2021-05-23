@@ -26,12 +26,11 @@ func currencyConversionMiddleware(service: CurrencyConversion) -> Middleware<App
             return Just(AppAction.updateExchangeRates(Set(exchangeRates))).eraseToAnyPublisher()
             
         case .update(currencies: let currencies, exchangeRateSource: let source):
-        
-            guard let selected = currencies.first(where: { $0.code == service.source.source }) else {
+            service.source = source
+
+            guard let selected = currencies.first(where: { $0.code == source.source }) else {
                 return Empty().eraseToAnyPublisher()
             }
-
-            service.source = source
             
             return Just(AppAction.exchangeRateCalculator(.selected(selected)))
                 .eraseToAnyPublisher()
