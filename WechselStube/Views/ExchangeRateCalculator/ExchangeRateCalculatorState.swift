@@ -8,6 +8,6 @@
 import Foundation
 
 struct ExchangeRateCalculatorState: Equatable {
-    var selected: Currency
+    var selected: Currency?
     var amount: Double
 }
