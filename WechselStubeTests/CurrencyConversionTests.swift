@@ -20,11 +20,11 @@ class CurrencyConversionTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        source = .init(source: usd,
+        source = .init(source: usd.code,
                        rates: [
-                        usd: 1.0,
-                        jpy: usdJPY,
-                        eur: usdEUR
+                        usd.code: 1.0,
+                        jpy.code: usdJPY,
+                        eur.code: usdEUR
                        ])
     }
 
@@ -38,14 +38,14 @@ extension CurrencyConversionTests {
     
     func testSourceToCurrency() throws {
         let converter = CurrencyConversion(source: source)
-        let result = try XCTUnwrap(converter.convertRate(from: usd, to: jpy))
+        let result = try XCTUnwrap(converter.convertRate(from: usd.code, to: jpy.code))
         
         XCTAssertEqual(result, usdJPY, accuracy: 2)
     }
     
     func testCurrencyToSource() throws {
         let converter = CurrencyConversion(source: source)
-        let result = try XCTUnwrap(converter.convertRate(from: jpy, to: usd))
+        let result = try XCTUnwrap(converter.convertRate(from: jpy.code, to: usd.code))
         let expected = 1 / usdJPY
         
         XCTAssertEqual(result, expected, accuracy: 2)
@@ -53,7 +53,7 @@ extension CurrencyConversionTests {
     
     func testCurrencyPairNotContainingSource() throws {
         let converter = CurrencyConversion(source: source)
-        let result = try XCTUnwrap(converter.convertRate(from: eur, to: jpy))
+        let result = try XCTUnwrap(converter.convertRate(from: eur.code, to: jpy.code))
         let expected = usdJPY / usdEUR
         XCTAssertEqual(result, expected, accuracy: 2)
     }

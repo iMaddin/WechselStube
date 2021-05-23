@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct CurrencyConversion {
+class CurrencyConversion {
     var source: ExchangeRateSource
+    
+    init(source: ExchangeRateSource) {
+        self.source = source
+    }
+    
 }
 
 extension CurrencyConversion {
-    func convertRate(from: Currency, to: Currency) -> Double? {
+    func convertRate(from: CurrencyCode, to: CurrencyCode) -> Double? {
         guard let fromRate = source.rates[from],
               let toRate = source.rates[to] else { return nil }
         

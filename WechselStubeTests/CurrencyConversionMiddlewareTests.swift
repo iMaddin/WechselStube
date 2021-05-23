@@ -32,13 +32,14 @@ class CurrencyConversionMiddlewareTests: XCTestCase {
                                            exchangeRateCalculatorState: .init(selected: usd,
                                                                               amount: 1.0))
         
-        let source: ExchangeRateSource = .init(source: usd,
+        let source: ExchangeRateSource = .init(source: usd.code,
                                                rates: [
-                                                usd: 1.0,
-                                                jpy: usdJPY,
-                                                eur: usdEUR
+                                                usd.code: 1.0,
+                                                jpy.code: usdJPY,
+                                                eur.code: usdEUR
                                                ]
         )
+        self.source = source
         
         store = .init(initialState: initialState,
                       reducer: appReducer,
@@ -69,6 +70,22 @@ extension CurrencyConversionMiddlewareTests {
             ]
             
             XCTAssertEqual(result, expected)
+            testExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+    
+    func testSourceChange() throws {
+        let testExpectation = expectation(description: "Update exchange rate source")
+        
+        XCTAssertTrue(store.state.exchangeRateStore.exchangeRates.isEmpty)
+        store.dispatch(.updateExchangeRateSource(source))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+            XCTAssertEqual(source, store.state.exchangeRateStore.source)
+            XCTAssertFalse(store.state.exchangeRateStore.exchangeRates.isEmpty)
+            
             testExpectation.fulfill()
         }
         

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrencyInputView: View {
     
-    @Binding var selected: Currency
+    @Binding var selected: Currency?
     let currencies: [Currency]
     @Binding var amount: String
     
@@ -40,8 +40,8 @@ private extension CurrencyInputView {
     }
     
     func currencyLabel() -> some View {
-        CurrencyLabel(title: selected.code,
-                             subtitle: selected.name)
+        CurrencyLabel(title: selected?.code ?? "Loading",
+                      subtitle: selected?.name ?? "Fetching currencies")
     }
     
     func valueInput() -> some View {

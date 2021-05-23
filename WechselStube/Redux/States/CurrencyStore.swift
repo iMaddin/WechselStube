@@ -9,4 +9,8 @@ import Foundation
 
 struct CurrencyStore: Equatable {
     var currencies: Set<Currency> = []
+    
+    var sortedCurrencies: [Currency] {
+        currencies.sorted { $0.code < $1.code }
+    }
 }
