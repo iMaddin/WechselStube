@@ -40,10 +40,8 @@ private extension CurrencyInputView {
     }
     
     func currencyLabel() -> some View {
-        selected.map { selected in
-            CurrencyLabel(title: selected.code,
-                          subtitle: selected.name)
-        }
+        CurrencyLabel(title: selected?.code ?? "Loading",
+                      subtitle: selected?.name ?? "Fetching currencies")
     }
     
     func valueInput() -> some View {
