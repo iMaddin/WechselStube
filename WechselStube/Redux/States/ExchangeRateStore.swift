@@ -8,5 +8,6 @@
 import Foundation
 
 struct ExchangeRateStore: Equatable {
+    var source: ExchangeRateSource?
     var exchangeRates: Set<ExchangeRate> = []
 }

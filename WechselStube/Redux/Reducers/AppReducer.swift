@@ -12,6 +12,12 @@ func appReducer(state: inout AppState, action: AppAction) {
     
     case .exchangeRateCalculator(let action):
         exchangeRateCalculatorReducer(state: &state.exchangeRateCalculatorState, action: action)
+    
+    case .updateCurrencies(let currencies):
+        state.currencyStore.currencies = currencies
+    case .updateExchangeRateSource(let source):
+        state.exchangeRateStore.source = source
+        
     case .updateExchangeRates(let rates):
         state.exchangeRateStore.exchangeRates = rates
     }

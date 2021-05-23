@@ -9,5 +9,8 @@ import Foundation
 
 enum AppAction {
     case exchangeRateCalculator(ExchangeRateCalculatorAction)
+    
+    case updateCurrencies(Set<Currency>)
+    case updateExchangeRateSource(ExchangeRateSource)
     case updateExchangeRates(Set<ExchangeRate>)
 }
