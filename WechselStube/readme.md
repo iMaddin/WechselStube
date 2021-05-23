@@ -9,5 +9,7 @@ WechselStube is a currency converter app built with SwiftUI and using a redux-li
 - [x] Includes some unit tests
 
 ## TODO:
+There is little networking code for simplicity sake and lack of time.
+
 - [ ] Error handling
 - [ ] mockable URLSession
