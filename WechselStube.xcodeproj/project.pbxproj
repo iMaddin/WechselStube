@@ -45,6 +45,7 @@
 		2A307F5B265A17E1001DEE74 /* CurrencyLayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5A265A17E1001DEE74 /* CurrencyLayerList.swift */; };
 		2A307F5D265A18B7001DEE74 /* CurrencyLayerLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5C265A18B7001DEE74 /* CurrencyLayerLive.swift */; };
 		2A307F5F265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */; };
+		2A307F61265A2532001DEE74 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F60265A2532001DEE74 /* AppStateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		2A307F5A265A17E1001DEE74 /* CurrencyLayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerList.swift; sourceTree = "<group>"; };
 		2A307F5C265A18B7001DEE74 /* CurrencyLayerLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerLive.swift; sourceTree = "<group>"; };
 		2A307F5E265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesFetcherMiddlewareTests.swift; sourceTree = "<group>"; };
+		2A307F60265A2532001DEE74 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				2A307EE82658C36A001DEE74 /* WechselStubeTests.swift */,
 				2A307F352658E939001DEE74 /* CurrencyConversionTests.swift */,
+				2A307F60265A2532001DEE74 /* AppStateTests.swift */,
 				2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */,
 				2A307F51265A0284001DEE74 /* DataStateTests.swift */,
 				2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */,
@@ -492,6 +495,7 @@
 				2A307F3D2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift in Sources */,
 				2A307F52265A0284001DEE74 /* DataStateTests.swift in Sources */,
 				2A307F3B2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift in Sources */,
+				2A307F61265A2532001DEE74 /* AppStateTests.swift in Sources */,
 				2A307F362658E939001DEE74 /* CurrencyConversionTests.swift in Sources */,
 				2A307F5F265A1FBB001DEE74 /* ExchangeRatesFetcherMiddlewareTests.swift in Sources */,
 				2A307EE92658C36A001DEE74 /* WechselStubeTests.swift in Sources */,

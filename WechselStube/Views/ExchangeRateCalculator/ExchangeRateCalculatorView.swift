@@ -31,9 +31,10 @@ struct ExchangeRateCalculatorView: View {
 private extension ExchangeRateCalculatorView {
     
     func inputView() -> some View {
-        let selectedBinding = Binding(
+        let selectedBinding: Binding<Currency?> = Binding(
             get: { store.state.exchangeRateCalculatorState.selected },
-            set: { store.dispatch(.exchangeRateCalculator(.selected($0))) })
+            set: { store.dispatch(.exchangeRateCalculator(.selected($0))) }
+        )
         
         return VStack {
             HStack {
@@ -44,7 +45,7 @@ private extension ExchangeRateCalculatorView {
             .padding(.top)
             
             CurrencyInputView(selected: selectedBinding,
-                              currencies: Array(store.state.currencyStore.currencies),
+                              currencies: store.state.currencyStore.sortedCurrencies,
                               amount: $amount)
                 .frame(height: 44.0)
                 .foregroundColor(.accentColor)

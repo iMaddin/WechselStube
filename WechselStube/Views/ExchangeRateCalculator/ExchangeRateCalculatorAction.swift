@@ -9,5 +9,5 @@ import Foundation
 
 enum ExchangeRateCalculatorAction {
     case amount(Double)
-    case selected(Currency)
+    case selected(Currency?)
 }
