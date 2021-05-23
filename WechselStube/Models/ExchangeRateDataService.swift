@@ -14,20 +14,33 @@ enum ExchangeRateKeys: String {
 
 struct ExchangeRateDataService {
     
+    var userDefaults: UserDefaults
+    
+    init(userDefaults: UserDefaults = .standard) {
+        self.userDefaults = userDefaults
+    }
+    
+}
+
+extension ExchangeRateDataService {
+    
     var lastFetchDate: Date? {
         get { userDefaults.value(forKey: ExchangeRateKeys.lastFetchDate.rawValue) as? Date }
         set { userDefaults.set(newValue, forKey: ExchangeRateKeys.lastFetchDate.rawValue) }
     }
     
     var exchangeRate: ExchangeRate? {
-        get { userDefaults.value(forKey: ExchangeRateKeys.exchangeRate.rawValue) as? ExchangeRate }
-        set { userDefaults.set(newValue, forKey: ExchangeRateKeys.exchangeRate.rawValue) }
-    }
-    
-    var userDefaults: UserDefaults
-    
-    init(userDefaults: UserDefaults = .standard) {
-        self.userDefaults = userDefaults
+        get {
+            guard let data = userDefaults.value(forKey: ExchangeRateKeys.exchangeRate.rawValue) as? Data else { return nil }
+            return try? JSONDecoder().decode(ExchangeRate.self, from: data)
+        }
+        set {
+            
+            if let newValue = newValue,
+               let data = try? JSONEncoder().encode(newValue) {
+               userDefaults.set(data, forKey: ExchangeRateKeys.exchangeRate.rawValue)
+            }
+        }
     }
     
 }

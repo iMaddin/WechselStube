@@ -26,6 +26,7 @@ extension Currency: Identifiable {
 }
 
 extension Currency: Equatable {}
+extension Currency: Codable {}
 
 extension Currency {
     
