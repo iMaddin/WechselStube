@@ -80,7 +80,8 @@ extension CurrencyConversionMiddlewareTests {
         let testExpectation = expectation(description: "Update exchange rate source")
         
         XCTAssertTrue(store.state.exchangeRateStore.exchangeRates.isEmpty)
-        store.dispatch(.updateExchangeRateSource(source))
+        
+        store.dispatch(.update(currencies: store.state.currencyStore.currencies, exchangeRateSource: source))
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             XCTAssertEqual(source, store.state.exchangeRateStore.source)

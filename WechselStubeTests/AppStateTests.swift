@@ -24,11 +24,24 @@ class AppStateTests: XCTestCase {
 
 extension AppStateTests {
     
-    func testUpdateCurrencies() throws {
+    func testUpdate() throws {
         XCTAssertTrue(store.state.currencyStore.currencies.isEmpty)
         
+        let usd: Currency = .init(code: "USD", name: "")
+        let jpy: Currency = .init(code: "JPY", name: "")
+        let eur: Currency = .init(code: "EUR", name: "")
+        
+        let usdJPY = 108.92504
+        let usdEUR = 0.820934
+        
+        let source: ExchangeRateSource = .init(source: usd.code,
+                                               rates: [
+                                                usd.code: 1.0,
+                                                jpy.code: usdJPY,
+                                                eur.code: usdEUR
+                                               ])
         let currencies: Set<Currency> = [.jpy, .usd]
-        store.dispatch(.updateCurrencies(currencies))
+        store.dispatch(.update(currencies: currencies, exchangeRateSource: source))
         
         XCTAssertEqual(currencies, store.state.currencyStore.currencies)
     }

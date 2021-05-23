@@ -10,10 +10,28 @@ import XCTest
 
 class PersistentDataMiddleWareTests: XCTestCase {
     
-    private var store: AppStore = .init(initialState: .init(), reducer: appReducer)
+    let userDefaultsSuiteName = "TestDefaults"
+    
+    private var store: AppStore!
+    private var fetchDate: Date!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        fetchDate = Date()
+        
+        UserDefaults().removePersistentDomain(forName: userDefaultsSuiteName)
+        
+        if let testDefaults = UserDefaults(suiteName: userDefaultsSuiteName) {
+            let service = ExchangeRateDataService(userDefaults: testDefaults)
+            service.lastFetchDate = fetchDate
+            
+            store = .init(initialState: .init(),
+                                               reducer: appReducer,
+                                               middlewares: [
+                                               persistentDataMiddleware(service: service)])
+        }
+        
     }
 
     override func tearDownWithError() throws {
@@ -24,14 +42,10 @@ class PersistentDataMiddleWareTests: XCTestCase {
 
 extension PersistentDataMiddleWareTests {
     
-    func testStoreCurrencies() throws {
-        store.dispatch(.data(.fetchCurrencies))
+    func testStoreData() throws {
+//        store.state.
         
-        // TODO: missing implementation
-    }
-    
-    func testStoreExchangeRates() throws {
-        store.dispatch(.data(.fetchExchangeRates))
+        store.dispatch(.data(.fetch))
         
         // TODO: missing implementation
     }

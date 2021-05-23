@@ -10,8 +10,7 @@ import Foundation
 enum DataAction {
     case load
     
-    case fetchCurrencies
-    case fetchExchangeRates
+    case fetch
     
     case loadCached
     case isLoading(Bool)

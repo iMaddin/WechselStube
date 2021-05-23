@@ -11,7 +11,6 @@ enum AppAction {
     case data(DataAction)
     case exchangeRateCalculator(ExchangeRateCalculatorAction)
     
-    case updateCurrencies(Set<Currency>)
-    case updateExchangeRateSource(ExchangeRateSource)
+    case update(currencies: Set<Currency>, exchangeRateSource: ExchangeRateSource)
     case updateExchangeRates(Set<ExchangeRate>)
 }
