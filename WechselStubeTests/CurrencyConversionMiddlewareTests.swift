@@ -32,11 +32,11 @@ class CurrencyConversionMiddlewareTests: XCTestCase {
                                            exchangeRateCalculatorState: .init(selected: usd,
                                                                               amount: 1.0))
         
-        let source: ExchangeRateSource = .init(source: usd,
+        let source: ExchangeRateSource = .init(source: usd.code,
                                                rates: [
-                                                usd: 1.0,
-                                                jpy: usdJPY,
-                                                eur: usdEUR
+                                                usd.code: 1.0,
+                                                jpy.code: usdJPY,
+                                                eur.code: usdEUR
                                                ]
         )
         self.source = source

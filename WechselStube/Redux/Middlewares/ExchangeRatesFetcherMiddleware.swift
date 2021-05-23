@@ -29,15 +29,17 @@ func exchangeRatesFetcherMiddleware(service: CurrencyLayerService) -> Middleware
         case .data(.fetchExchangeRates):
             return service.fetchExchangeRates()
                 .map { live in
-                    var rates: [Currency: Double] = [:]
+                    var rates: [CurrencyCode: Double] = [:]
                     
                     for (key, value) in live.quotes {
                         let currencyCode = key.replacingOccurrences(of: live.source, with: "")
                         
-                        rates[Currency(code: currencyCode, name: "")] = value
+                        rates[currencyCode] = value
                     }
                     
-                    let source = ExchangeRateSource(source: .init(code: live.source, name: ""),
+                    rates[live.source] = 1.0
+                    
+                    let source = ExchangeRateSource(source: live.source,
                                                     rates: rates)
                     
                     return AppAction.updateExchangeRateSource(source)

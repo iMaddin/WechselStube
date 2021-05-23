@@ -17,7 +17,7 @@ class CurrencyConversion {
 }
 
 extension CurrencyConversion {
-    func convertRate(from: Currency, to: Currency) -> Double? {
+    func convertRate(from: CurrencyCode, to: CurrencyCode) -> Double? {
         guard let fromRate = source.rates[from],
               let toRate = source.rates[to] else { return nil }
         

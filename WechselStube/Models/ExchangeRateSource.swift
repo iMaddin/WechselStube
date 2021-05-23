@@ -7,9 +7,11 @@
 
 import Foundation
 
+typealias CurrencyCode = String
+
 struct ExchangeRateSource {
-    var source: Currency
-    var rates: [Currency: Double]
+    var source: CurrencyCode
+    var rates: [CurrencyCode: Double]
 }
 
 extension ExchangeRateSource: Hashable {}
@@ -18,7 +20,7 @@ extension ExchangeRateSource: Codable {}
 
 extension ExchangeRateSource {
     static var none: Self {
-        .init(source: .init(code: "", name: ""),
+        .init(source: "",
               rates: [:])
     }
 }

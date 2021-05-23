@@ -19,6 +19,10 @@ func appReducer(state: inout AppState, action: AppAction) {
         state.currencyStore.currencies = currencies
     case .updateExchangeRateSource(let source):
         state.exchangeRateStore.source = source
+        if state.exchangeRateCalculatorState.selected == nil,
+           let currency = state.currencyStore.currencies.first(where: { $0.code == source.source }) {
+            state.exchangeRateCalculatorState.selected = currency
+        }
         
     case .updateExchangeRates(let rates):
         state.exchangeRateStore.exchangeRates = rates
