@@ -33,6 +33,7 @@
 		2A307F392658EEB7001DEE74 /* CurrencyConversionMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */; };
 		2A307F3B2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */; };
 		2A307F3D2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */; };
+		2A307F58265A0571001DEE74 /* TestWithYourApiKeyHere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A307F57265A0571001DEE74 /* TestWithYourApiKeyHere.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		2A307F382658EEB7001DEE74 /* CurrencyConversionMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMiddleware.swift; sourceTree = "<group>"; };
 		2A307F3A2658F2BE001DEE74 /* CurrencyConversionMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMiddlewareTests.swift; sourceTree = "<group>"; };
 		2A307F3C2658FF8D001DEE74 /* ExchangeRateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculatorTests.swift; sourceTree = "<group>"; };
+		2A307F57265A0571001DEE74 /* TestWithYourApiKeyHere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWithYourApiKeyHere.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				2A307F012658C3D9001DEE74 /* readme.md */,
+				2A307F57265A0571001DEE74 /* TestWithYourApiKeyHere.swift */,
 				2A307EDF2658C36A001DEE74 /* Info.plist */,
 				2A307ED62658C369001DEE74 /* WechselStubeApp.swift */,
 				2A307EDA2658C36A001DEE74 /* Assets.xcassets */,
@@ -420,6 +423,7 @@
 				2A307F242658D3D8001DEE74 /* ExchangeRate.swift in Sources */,
 				2A307F302658DC2C001DEE74 /* ExchangeRateStore.swift in Sources */,
 				2A307F132658C7F2001DEE74 /* AppReducer.swift in Sources */,
+				2A307F58265A0571001DEE74 /* TestWithYourApiKeyHere.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
