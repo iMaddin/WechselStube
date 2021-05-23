@@ -12,37 +12,14 @@ func exchangeRatesFetcherMiddleware(service: CurrencyLayerService) -> Middleware
     { state, action in
         switch action {
         
-        case .data(.fetchCurrencies):
-            return service.fetchCurrencies()
-                .map { list in
-                    let currencies = list.currencies.map { (code, name) in
-                        Currency(code: code, name: name)
-                    }
-                    
-                    return AppAction.updateCurrencies(Set(currencies))
-                }
-                .catch { _ in
-                    Empty<AppAction, Never>().eraseToAnyPublisher()
-                }
-                .eraseToAnyPublisher()
-            
-        case .data(.fetchExchangeRates):
-            return service.fetchExchangeRates()
-                .map { live in
-                    var rates: [CurrencyCode: Double] = [:]
-                    
-                    for (key, value) in live.quotes {
-                        let currencyCode = key.replacingOccurrences(of: live.source, with: "")
-                        
-                        rates[currencyCode] = value
-                    }
-                    
-                    rates[live.source] = 1.0
-                    
-                    let source = ExchangeRateSource(source: live.source,
-                                                    rates: rates)
-                    
-                    return AppAction.updateExchangeRateSource(source)
+        case .data(.fetch):
+            return Publishers.Zip(
+                service.fetchCurrencies(),
+                service.fetchExchangeRates())
+                .map { list, live in
+                    let currencies = convert(list: list)
+                    let source = convert(live: live)
+                    return AppAction.update(currencies: currencies, exchangeRateSource: source)
                 }
                 .catch { _ in
                     Empty<AppAction, Never>().eraseToAnyPublisher()
@@ -55,4 +32,26 @@ func exchangeRatesFetcherMiddleware(service: CurrencyLayerService) -> Middleware
         
         return Empty().eraseToAnyPublisher()
     }
+}
+
+fileprivate func convert(live: CurrencyLayerLive) -> ExchangeRateSource {
+    var rates: [CurrencyCode: Double] = [:]
+    
+    for (key, value) in live.quotes {
+        let currencyCode = key.replacingOccurrences(of: live.source, with: "")
+        
+        rates[currencyCode] = value
+    }
+    
+    rates[live.source] = 1.0
+    
+    return ExchangeRateSource(source: live.source,
+                                    rates: rates)
+}
+
+fileprivate func convert(list: CurrencyLayerList) -> Set<Currency> {
+    let currencies = list.currencies.map { (code, name) in
+        Currency(code: code, name: name)
+    }
+    return Set(currencies)
 }

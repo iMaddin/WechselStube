@@ -14,7 +14,8 @@ struct WechselStubeApp: App {
                                            reducer: appReducer,
                                            middlewares: [
                                             currencyConversionMiddleware(service: .init(source: .none)),
-                                            exchangeRatesFetcherMiddleware(service: .init())
+                                            exchangeRatesFetcherMiddleware(service: .init()),
+                                            persistentDataMiddleware(service: .init())
                                            ])
     
     var body: some Scene {
@@ -22,8 +23,7 @@ struct WechselStubeApp: App {
             ExchangeRateCalculatorView()
                 .environmentObject(appStore)
                 .onAppear {
-                    appStore.dispatch(.data(.fetchCurrencies))
-                    appStore.dispatch(.data(.fetchExchangeRates))
+                    appStore.dispatch(.data(.load))
                 }
         }
     }
