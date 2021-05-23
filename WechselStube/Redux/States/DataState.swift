@@ -8,5 +8,6 @@
 import Foundation
 
 struct DataState: Equatable {
+    // TODO: missing implementation
     var isLoading = false
 }
