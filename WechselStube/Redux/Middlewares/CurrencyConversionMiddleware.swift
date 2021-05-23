@@ -21,6 +21,11 @@ func currencyConversionMiddleware(service: CurrencyConversion) -> Middleware<App
             
             return Just(AppAction.updateExchangeRates(Set(exchangeRates))).eraseToAnyPublisher()
             
+        case .updateExchangeRateSource(let source):
+            service.source = source
+            return Just(AppAction.exchangeRateCalculator(.selected(state.exchangeRateCalculatorState.selected)))
+                .eraseToAnyPublisher()
+            
         default:
             break
         }

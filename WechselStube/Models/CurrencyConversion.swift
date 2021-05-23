@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct CurrencyConversion {
+class CurrencyConversion {
     var source: ExchangeRateSource
+    
+    init(source: ExchangeRateSource) {
+        self.source = source
+    }
+    
 }
 
 extension CurrencyConversion {

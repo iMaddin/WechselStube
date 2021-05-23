@@ -14,6 +14,7 @@ struct ExchangeRateSource {
 
 extension ExchangeRateSource: Hashable {}
 extension ExchangeRateSource: Equatable {}
+extension ExchangeRateSource: Codable {}
 
 extension ExchangeRateSource {
     static var none: Self {
