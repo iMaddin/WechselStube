@@ -11,6 +11,9 @@ struct AppState: Equatable {
     var currencyStore: CurrencyStore = .init()
     var exchangeRateStore: ExchangeRateStore = .init()
     
-    var exchangeRateCalculatorState: ExchangeRateCalculatorState = .init(selected: .init(code: "", name: ""),
+    var exchangeRateCalculatorState: ExchangeRateCalculatorState = .init(selected: .init(code: "",
+                                                                                         name: ""),
                                                                          amount: 1.0)
+    
+    var dataState: DataState = .init()
 }
